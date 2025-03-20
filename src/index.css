@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+/* #root {
+  min-height: 100dvh;
+} */
+
+@layer base {
+  body {
+    scroll-behavior: smooth;
+    background-color: #0F172A;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-[#0F172A]/80 backdrop-blur-sm border border-gray-800 rounded-xl p-6 shadow-lg transition-all duration-300;
+  }
+}
+
+/* hero section background */
+.imagem-hero {
+  background-image: url('assets/grid.svg');
+}
