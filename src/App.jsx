@@ -12,9 +12,9 @@ function App() {
       <Header />
       <HashRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/advanced-stats" element={<AdvancedStats/>} />
-          <Route path="/players" element={<PlayersStats/>} />
+          <Route path="projeto-stats/" element={<Home />} />
+          <Route path="projeto-stats/advanced-stats" element={<AdvancedStats/>} />
+          <Route path="projeto-stats/players" element={<PlayersStats/>} />
         </Routes>
       </HashRouter>
       <Footer />
