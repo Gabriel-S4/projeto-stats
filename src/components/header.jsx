@@ -4,7 +4,7 @@ import {
     Search, Menu, X
 } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
-import logo from '/public/LOGO STATS.png'
+import logo from '../assets/LOGO STATS.png'
 
 const header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
