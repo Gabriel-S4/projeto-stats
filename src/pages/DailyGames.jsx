@@ -24,7 +24,7 @@ const leagues = [
         matchUrl: "/match/1328108",
         matchDate: new Date(), // Data da partida
       },
-      // Adicione mais jogos para a J-League Cup
+      // adicione mais jogos para a J-League Cup
     ],
   },
   {
@@ -48,10 +48,10 @@ const leagues = [
         matchUrl: "/match/1328109",
         matchDate: new Date(), // Data da partida
       },
-      // Adicione mais jogos para a Premier League
+      // adicione mais jogos para a Premier League
     ],
   },
-  // Adicione mais ligas conforme necessário
+  // adicione mais ligas
 ];
 
 function MatchCard({ match }) {
@@ -207,7 +207,7 @@ function DailyGames() {
         <div className="flex justify-between items-center mb-6">
           <button
             onClick={previousDay}
-            className="p-2 bg-gray-800/50 hover:bg-gray-800 rounded-full transition-colors"
+            className="p-2 bg-gray-800/50 hover:bg-gray-800 rounded-full transition-colors cursor-pointer"
             aria-label="Dia anterior"
           >
             <svg
@@ -220,7 +220,7 @@ function DailyGames() {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="lucide lucide-chevron-left w-5 h-5 text-white/60 cursor-pointer"
+              className="lucide lucide-chevron-left w-5 h-5 text-white/60"
             >
               <path d="m15 18-6-6 6-6"></path>
             </svg>
@@ -235,7 +235,7 @@ function DailyGames() {
           </div>
           <button
             onClick={nextDay}
-            className="p-2 bg-gray-800/50 hover:bg-gray-800 rounded-full transition-colors"
+            className="p-2 bg-gray-800/50 hover:bg-gray-800 rounded-full transition-colors cursor-pointer"
             aria-label="Próximo dia"
           >
             <svg
@@ -248,7 +248,7 @@ function DailyGames() {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="lucide lucide-chevron-right w-5 h-5 text-white/60 cursor-pointer"
+              className="lucide lucide-chevron-right w-5 h-5 text-white/60"
             >
               <path d="m9 18 6-6-6-6"></path>
             </svg>

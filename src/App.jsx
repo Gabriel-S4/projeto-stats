@@ -10,6 +10,9 @@ import LiveStats from "./pages/LiveStats";
 import NotFound from "./pages/NotFound";
 import TeamComparison from "./pages/TeamComparison"
 import Calendar from "./pages/Calendar";
+import AdvancedMetrics from "./pages/AdvancedMetrics";
+import Trends from "./pages/Trends";
+import Teste from "./pages/teste"
 
 function App() {
   return (
@@ -24,6 +27,9 @@ function App() {
           <Route path="/calendar" element={<Calendar />} />
           <Route path="/team-comparison" element={<TeamComparison/>} />
           <Route path="/live" element={<LiveStats />} />
+          <Route path="/trends" element={<Trends />} />
+          <Route path="/advanced-metrics" element={<AdvancedMetrics/>}/>
+          <Route path="/teste" element={<Teste/>} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />

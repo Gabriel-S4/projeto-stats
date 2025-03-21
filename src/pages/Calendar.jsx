@@ -53,7 +53,7 @@ export default function Calendar() {
             </button>
 
             <h2 className="text-xl font-bold bg-gradient-to-r from-purple-800 to-blue-600 bg-clip-text text-transparent flex items-center gap-2">
-              <CalendarIcon className="w-5 h-5" />
+              <CalendarIcon className="w-5 h-5 text-[#8f05d6]" />
               {format(weekStart, "MMMM yyyy", { locale: ptBR })}
             </h2>
 
@@ -123,7 +123,7 @@ export default function Calendar() {
             <div className="card p-6 sticky top-20">
               <div className="flex justify-between items-center mb-4">
                 <h2 className="text-xl text-left font-bold bg-gradient-to-r from-purple-800 to-blue-600 bg-clip-text text-transparent flex items-center  gap-2">
-                  <Filter className="size-4 text-white" />
+                  <Filter className="size-4 text-[#8f05d6]" />
                   Filtros
                 </h2>
               </div>

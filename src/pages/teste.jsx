@@ -1,8 +1,8 @@
-import React, {Suspense} from 'react';
+import React, { Suspense, useState, useEffect } from 'react';
 import { Brain, BarChart3, Target } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import TextGradient from '../TextGradient.jsx'
-import LoadingComponent from '../LoadingComponent.jsx';
+import TextGradient from '../components/TextGradient.jsx';
+import LoadingComponent from '../components/LoadingComponent.jsx';
 
 // Dados do card em objetos (caso queira acresentar so adicionar um objeto usando os mesmos parametros e substituir os valores)
 const cardsData = [
@@ -19,9 +19,9 @@ const cardsData = [
     },
     {
         icon: <BarChart3 className="w-6 h-6 text-purple-400" />,
-        precision: '83% precisão',   
-        titleGame: 'Chelsea vs Barcelona',  
-        overUnder: 'Over/Under',   
+        precision: '83% precisão',
+        titleGame: 'Chelsea vs Barcelona',
+        overUnder: 'Over/Under',
         rate: 'Over 2.5',
         house: '41%',
         draw: '24%',
@@ -109,6 +109,17 @@ const Card = ({ precision, titleGame, overUnder, rate, house, draw, off, odd }) 
 );
 
 const CardPredictions = () => {
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        // Simulando um atraso de 3 segundos
+        const timer = setTimeout(() => {
+            setIsLoading(false);
+        }, 3000);
+
+        return () => clearTimeout(timer); // Limpar o timer quando o componente for desmontado
+    }, []);
+
     return (
         <section className="mb-16 mt-8">
             <div className="flex justify-between items-center mb-6">
@@ -120,12 +131,16 @@ const CardPredictions = () => {
                     Ver todas
                 </Link>
             </div>
-            <Suspense fallback={<LoadingComponent/>}>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {cardsData.map((card, index) => (
-                        <Card key={index} {...card} />
-                    ))}
-                </div>
+            <Suspense fallback={<LoadingComponent />}>
+                {isLoading ? (
+                    <LoadingComponent />
+                ) : (
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        {cardsData.map((card, index) => (
+                            <Card key={index} {...card} />
+                        ))}
+                    </div>
+                )}
             </Suspense>
         </section>
     );
