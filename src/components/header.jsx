@@ -146,7 +146,7 @@ const header = () => {
 
 const Dropdown = () => {
   return (
-    <div className="flex justify-center items-center bg-transparent gap-2 text-white hover:text-[#8F05D6]">
+    <div className="flex justify-center items-center bg-transparent gap-2 text-white hover:text-[#8F05D6] pr-20 2xl:pr-0">
       <FlyoutLink href="" FlyoutContent={PricingContent}>
         Mais
       </FlyoutLink>

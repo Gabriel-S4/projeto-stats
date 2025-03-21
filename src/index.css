@@ -1,9 +1,5 @@
 @import "tailwindcss";
 
-/* #root {
-  min-height: 100dvh;
-} */
-
 @layer base {
   body {
     scroll-behavior: smooth;
@@ -13,7 +9,11 @@
 
 @layer components {
   .card {
-    @apply bg-[#0F172A]/80 backdrop-blur-sm border border-gray-800 rounded-xl p-6 shadow-lg transition-all duration-300;
+    @apply bg-[#0F172A]/80 backdrop-blur-sm border border-gray-800 rounded-xl p-2  sm:p-6 shadow-lg transition-all duration-300;
+  }
+
+  .card-interactive {
+    @apply hover:bg-gray-900/90 hover:shadow-xl hover:border-[#8F05D6]/30 transform hover:-translate-y-1 cursor-pointer transition;
   }
 }
 

@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[442px] py-20">
+    <section className="relative min-h-[442px] py-20 w-full">
       <div className="mx-auto max-w-3xl text-center">
         <h1 className="text-4xl md:text-6xl font-bold mb-6 py-3 bg-gradient-to-r from-purple-400 to-blue-500 text-transparent bg-clip-text">
           Estatísticas Precisas para Apostas Inteligentes
@@ -12,12 +12,12 @@ const Hero = () => {
           para maximizar suas chances de sucesso.
         </p>
         <div className="flex flex-wrap md:flex-row mx-auto gap-4 justify-center">
-          <button className="bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600 text-white font-medium shadow-lg hover:shadow-xl transition-all rounded-md px-6 py-3 cursor-pointer">
+          <a href="/daily-games" className="bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600 text-white font-medium shadow-lg hover:shadow-xl transition-all rounded-md px-6 py-3 cursor-pointer">
             Ver jogos de hoje
-          </button>
-          <button className="bg-gray-800 hover:bg-gray-700 text-white font-medium border border-gray-700 hover:border-gray-600 transition-all rounded-md px-6 py-3 cursor-pointer">
+          </a>
+          <a href="/ticket-generator" className="bg-gray-800 hover:bg-gray-700 text-white font-medium border border-gray-700 hover:border-gray-600 transition-all rounded-md px-6 py-3 cursor-pointer">
             Gerar bilhete
-          </button>
+          </a>
         </div>
       </div>
       {/* background setup */}
